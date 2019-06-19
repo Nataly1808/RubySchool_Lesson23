@@ -22,6 +22,6 @@ post '/vizit' do
 	
 	erb "Dear #{@username}, #{@phone}, #{@datetime}, #{@barber}"
 	
-			
+				
 end
 
