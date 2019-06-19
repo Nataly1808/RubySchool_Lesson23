@@ -18,28 +18,10 @@ post '/vizit' do
 	@username = params[:username]
 	@phone = params[:phone]
 	@datetime = params[:datetime]
-
-	@title = 'Thank you!'
-	@message = "Dear #{@username}, we'll be waiting for you at #{@datetime}"
+	@barber = params[:barber]
 	
-	f = File.open './public/users.txt' , 'a'
-	f.write "User: #{@username}, Phone: #{@phone}, Date and time: #{@datetime}"
-	f.close
-
-	erb :message
+	erb "Dear #{@username}, #{@phone}, #{@datetime}, #{@barber}"
 	
+			
 end
 
-post '/contacts' do
-	@email = params[:email]
-	@text = params[:text]
-	
-	@title = 'Thank you!'
-		
-	f = File.open './public/contacs.txt' , 'a'
-	f.write "Email: #{@email}, Text: #{@text}"
-	f.close
-
-	erb :message
-	
-end
