@@ -19,9 +19,8 @@ post '/vizit' do
 	@phone = params[:phone]
 	@datetime = params[:datetime]
 	@barber = params[:barber]
+	@color = params[:color]
+	erb "Dear #{@username}, #{@phone}, #{@datetime}, #{@barber}, #{@color}"
 	
-	erb "Dear #{@username}, #{@phone}, #{@datetime}, #{@barber}"
-	
-				
 end
 
